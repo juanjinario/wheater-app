@@ -1,0 +1,12 @@
+{
+    "demo": {
+        "greeting": "Hola {{name}}!",
+        "text": "Esta es una simple demostración de traducción",
+        "text-in-code": "Traducción usando código",
+        "title": "Demo Traducción"
+    },
+    "commands": {
+        "save": "Guardar",
+        "cancel": "Cancelar"
+    }
+}
