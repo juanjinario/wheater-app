@@ -1,5 +1,5 @@
 <div class="content-wrapper">
-    <p>{{ 'demo.greeting' | translate:{'name':'Juan Jo'} }}</p><br/><br/>
+    <p>{{ 'demo.greeting' | translate:{'name':'Juan Jo'} }}</p><br/>
 
     <mat-card>
         Main Theme:
@@ -11,6 +11,20 @@
         </button>
         <button mat-raised-button color="warn">
           Warning
+        </button>
+    </mat-card><br/>
+    <mat-card>
+        <mat-card-header>
+            <mat-card-title>Alertas</mat-card-title>
+        </mat-card-header>
+        <button mat-button color="accent" (click)="showInfo()">
+            Show Info
+        </button>
+        <button mat-button color="primary" (click)="showSuccess()">
+            Show Success
+          </button>
+        <button mat-button color="primary" (click)="showError()">
+              Show Error
         </button>
     </mat-card>
 </div>

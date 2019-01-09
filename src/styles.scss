@@ -1,6 +1,7 @@
 // @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-// @import "assets/theme/lime-brown.scss";
-@import "assets/theme/blue-gray-pink.scss";
+// @import "styles/themes/lime-brown.scss";
+@import "styles/themes/blue-gray-pink.scss";
+@import 'styles/toastr.scss';
 * {
     margin: 0;
     padding: 0;
