@@ -5,8 +5,11 @@
             <button mat-icon-button (click)="navmenu.toggle()"><mat-icon>menu</mat-icon></button>
             <h1 class="app-name">Alfatec Test</h1>
             <span class="spacer"></span>
-            <mat-icon>favorite</mat-icon>
-            <mat-icon>delete</mat-icon>
+            <div class="right-buttons">
+                <a (click)="useLanguage('es')">{{ 'layout.spanish' | translate }}</a>
+                <mat-icon>more_vert</mat-icon>
+                <a (click)="useLanguage('en')">{{ 'layout.english' | translate }}</a>
+            </div>
         </mat-toolbar-row>
     </mat-toolbar>
 

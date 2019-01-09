@@ -2,6 +2,7 @@
 // @import "styles/themes/lime-brown.scss";
 @import "styles/themes/blue-gray-pink.scss";
 @import 'styles/toastr.scss';
+// Basics
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +12,16 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+a {
+    transition: color 0.25s;
+}
+
 .content-wrapper {
     padding: 30px 40px;
+}
+
+// Form
+// Resets
+g[class^='raphael-group-'][class$='-creditgroup'] text {
+    fill: white !important;
 }

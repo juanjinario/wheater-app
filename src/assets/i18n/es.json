@@ -1,12 +1,21 @@
 {
-    "demo": {
+    "layout": {
         "greeting": "Hola {{name}}!",
-        "text": "Esta es una simple demostración de traducción",
-        "text-in-code": "Traducción usando código",
+        "spanish": "Español",
+        "english": "Inglés",
         "title": "Demo Traducción"
+    },
+    "routing": {
+        "dashboard": "Dashboard",
+        "query": "Consulta",
+        "assets": "Activos",
+        "evaluation": "Evalución",
+        "indicators": "Indicadores",
+        "news": "Noticias"
     },
     "commands": {
         "save": "Guardar",
-        "cancel": "Cancelar"
+        "cancel": "Cancelar",
+        "quit": "Salir"
     }
 }

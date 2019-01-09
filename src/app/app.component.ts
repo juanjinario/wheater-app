@@ -10,5 +10,9 @@ export class AppComponent {
   title = 'front-office';
   constructor(private translate: TranslateService) {
     translate.setDefaultLang('es');
-}
+  }
+
+  useLanguage(language: string) {
+    this.translate.use(language);
+  }
 }

@@ -1,6 +1,21 @@
 {
-	"demo.greeting": "Hello {{name}}!",
-	"demo.text": "This is a simple demonstration app for ngx-translate",
-	"demo.text-in-code": "Translation used from code",
-	"demo.title": "Translation demo"
+    "layout": {
+        "greeting": "Hi {{name}}!",
+        "spanish": "Spanish",
+        "english": "English",
+        "title": "Title"
+    },
+    "routing": {
+        "dashboard": "Dashboard",
+        "query": "Query",
+        "assets": "Assets",
+        "evaluation": "Evaluation",
+        "indicators": "Indicators",
+        "news": "News"
+    },
+    "commands": {
+        "save": "Save",
+        "cancel": "Cancel",
+        "quit": "Quit"
+    }
 }

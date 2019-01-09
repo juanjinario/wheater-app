@@ -9,6 +9,19 @@
     h1.app-name {
         margin-left: 8px;
     }
+    .right-buttons {
+        font-size: 14px;
+        a {
+            color: rgba(255, 255, 255, 1);
+            cursor: pointer;
+        }
+        a:hover {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .mat-icon {
+            vertical-align: middle;
+        }
+    }
 }
 
 .spacer {
