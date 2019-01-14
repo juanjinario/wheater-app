@@ -5,6 +5,9 @@ import { PieComponent } from './pie/pie.component';
 import { NestedPieComponent } from './nested-pie/nested-pie.component';
 import { SplineAreaComponent } from './spline-area/spline-area.component';
 
+import { FusionchartsModule } from '../component/fusioncharts.module';
+
+
 @NgModule({
   declarations: [
     StepLineComponent,
@@ -12,6 +15,9 @@ import { SplineAreaComponent } from './spline-area/spline-area.component';
     PieComponent,
     NestedPieComponent,
     SplineAreaComponent,
+  ],
+  imports: [
+    FusionchartsModule
   ],
   exports: [
     StepLineComponent,

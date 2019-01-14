@@ -1,12 +1,12 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'app-navmenu',
-  templateUrl: './navmenu.component.html',
-  styleUrls: ['./navmenu.component.scss'],
+  selector: 'app-sidebar',
+  templateUrl: './sidebar.component.html',
+  styleUrls: ['./sidebar.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class NavmenuComponent implements OnInit {
+export class SidebarComponent implements OnInit {
 
   constructor() { }
 

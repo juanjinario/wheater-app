@@ -2,7 +2,7 @@
 
     <mat-toolbar color="primary">
         <mat-toolbar-row>
-            <button mat-icon-button (click)="navmenu.toggle()"><mat-icon>menu</mat-icon></button>
+            <button mat-icon-button (click)="sidebar.toggle()"><mat-icon>menu</mat-icon></button>
             <h1 class="app-name">Alfatec Test</h1>
             <span class="spacer"></span>
             <div class="right-buttons">
@@ -14,8 +14,8 @@
     </mat-toolbar>
 
     <mat-drawer-container class="drawer-container" autosize>
-        <mat-drawer #navmenu mode="side" opened>
-            <app-navmenu></app-navmenu>
+        <mat-drawer #sidebar mode="side" opened>
+            <app-sidebar></app-sidebar>
         </mat-drawer>
 
         <mat-drawer-content>

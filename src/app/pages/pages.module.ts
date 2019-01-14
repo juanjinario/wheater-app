@@ -3,9 +3,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { PagesComponent } from './pages.component';
 import { ChartsModule } from './charts/charts.module';
 
+import { AppPagesRoutingModule } from './pages.routing';
 // Modules
 import { MaterialModule } from './component/material.module';
-import { FusionchartsModule } from './component/fusioncharts.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -13,9 +15,11 @@ import { FusionchartsModule } from './component/fusioncharts.module';
     PagesComponent
   ],
   imports: [
+    SharedModule,
     MaterialModule,
-    FusionchartsModule,
-    ChartsModule
+    FlexLayoutModule,
+    ChartsModule,
+    AppPagesRoutingModule
   ],
   exports: [
     DashboardComponent,
