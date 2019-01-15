@@ -1,14 +1,14 @@
 <mat-nav-list class="nav-list">
-    <a mat-list-item routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-        <mat-icon mat-list-icon [matTooltip]="Home" matTooltipPosition="right">dashboard</mat-icon><span>{{ 'routing.dashboard' | translate }}</span></a>
-    <a mat-list-item routerLink="list-user" routerLinkActive="active">
-        <mat-icon mat-list-icon [matTooltip]="Users" matTooltipPosition="right">search</mat-icon><span>{{ 'routing.query' | translate }}</span></a>
-    <a mat-list-item routerLink="list-user" routerLinkActive="active">
-        <mat-icon mat-list-icon [matTooltip]="Users" matTooltipPosition="right">widgets</mat-icon><span>{{ 'routing.assets' | translate }}</span></a>
-    <a mat-list-item routerLink="list-user" routerLinkActive="active">
-        <mat-icon mat-list-icon [matTooltip]="Users" matTooltipPosition="right">assignment</mat-icon><span>{{ 'routing.evaluation' | translate }}</span></a>
-    <a mat-list-item routerLink="list-user" routerLinkActive="active">
-        <mat-icon mat-list-icon [matTooltip]="Users" matTooltipPosition="right">trending_up</mat-icon><span>{{ 'routing.indicators' | translate }}</span></a>
-    <a mat-list-item routerLink="list-user" routerLinkActive="active">
-        <mat-icon mat-list-icon [matTooltip]="Users" matTooltipPosition="right">announcement</mat-icon><span>{{ 'routing.news' | translate }}</span></a>
+    <a mat-list-item routerLink="/dashboard" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <mat-icon mat-list-icon>dashboard</mat-icon><span>{{ 'routing.dashboard' | translate }}</span></a>
+    <a mat-list-item routerLink="/query" routerLinkActive="active">
+        <mat-icon mat-list-icon>search</mat-icon><span>{{ 'routing.query' | translate }}</span></a>
+    <a mat-list-item routerLink="/widgets" routerLinkActive="active">
+        <mat-icon mat-list-icon>widgets</mat-icon><span>{{ 'routing.assets' | translate }}</span></a>
+    <a mat-list-item routerLink="/assignment" routerLinkActive="active">
+        <mat-icon mat-list-icon>assignment</mat-icon><span>{{ 'routing.evaluation' | translate }}</span></a>
+    <a mat-list-item routerLink="/trending_up" routerLinkActive="active">
+        <mat-icon mat-list-icon>trending_up</mat-icon><span>{{ 'routing.indicators' | translate }}</span></a>
+    <a mat-list-item routerLink="/announcement" routerLinkActive="active">
+        <mat-icon mat-list-icon>announcement</mat-icon><span>{{ 'routing.news' | translate }}</span></a>
 </mat-nav-list>

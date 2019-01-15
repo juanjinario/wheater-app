@@ -5,8 +5,6 @@ import { ChartsModule } from './charts/charts.module';
 
 import { AppPagesRoutingModule } from './pages.routing';
 // Modules
-import { MaterialModule } from './component/material.module';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
@@ -16,8 +14,6 @@ import { SharedModule } from '../shared/shared.module';
   ],
   imports: [
     SharedModule,
-    MaterialModule,
-    FlexLayoutModule,
     ChartsModule,
     AppPagesRoutingModule
   ],

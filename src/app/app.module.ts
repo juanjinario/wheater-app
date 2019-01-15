@@ -3,11 +3,8 @@ import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
-import { ToastrModule } from 'ngx-toastr';
-import { MaterialModule } from './pages/component/material.module';
 
 import { PagesModule } from './pages/pages.module';
 import { SharedModule } from './shared/shared.module';
@@ -33,13 +30,10 @@ import { LoginComponent } from './auth/login/login.component';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    FlexLayoutModule,
     HttpClientModule,
     SharedModule,
     PagesModule,
     AppRoutingModule,
-    MaterialModule,
-    ToastrModule.forRoot(),
     TranslateModule.forRoot({
         loader: {
             provide: TranslateLoader,
