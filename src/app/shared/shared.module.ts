@@ -1,20 +1,27 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { HeaderComponent } from './header/header.component';
 import { MaterialModule } from '../pages/component/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ToastrModule } from 'ngx-toastr';
-import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
-import {TranslateHttpLoader} from '@ngx-translate/http-loader';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateHttpLoader} from '@ngx-translate/http-loader';
+
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { HeaderComponent } from './header/header.component';
+import { PageHeaderComponent } from './page-header/page-header.component';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
     SidebarComponent,
-    HeaderComponent
+    HeaderComponent,
+    PageHeaderComponent
   ],
   imports: [
+    FormsModule,
+    CommonModule,
     RouterModule,
     MaterialModule,
     FlexLayoutModule,
@@ -29,12 +36,15 @@ import {TranslateHttpLoader} from '@ngx-translate/http-loader';
     })
   ],
   exports: [
-    HeaderComponent,
-    SidebarComponent,
     MaterialModule,
     FlexLayoutModule,
     ToastrModule,
-    TranslateModule
+    TranslateModule,
+    HeaderComponent,
+    SidebarComponent,
+    PageHeaderComponent,
+    FormsModule,
+    CommonModule
   ]
 })
 export class SharedModule { }

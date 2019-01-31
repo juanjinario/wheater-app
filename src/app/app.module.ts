@@ -1,13 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClient, HTTP_INTERCEPTORS } from '@angular/common/http';
 import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {TranslateHttpLoader} from '@ngx-translate/http-loader';
 
 import { PagesModule } from './pages/pages.module';
-import { SharedModule } from './shared/shared.module';
+import { ServiceModule } from './services/service.module';
+import { AuthModule } from './auth/auth.module';
 
 // Routes
 import { AppRoutingModule } from './app.routing';
@@ -18,21 +18,19 @@ import { AppRoutingModule } from './app.routing';
 // Components
 import { AppComponent } from './app.component';
 import { NopagefoundComponent } from './404/nopagefound.component';
-import { LoginComponent } from './auth/login/login.component';
+import { AuthInterceptor } from './auth/authInterceptor';
 
 @NgModule({
   declarations: [
     AppComponent,
     NopagefoundComponent,
-    LoginComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    FormsModule,
-    HttpClientModule,
-    SharedModule,
+    AuthModule,
     PagesModule,
+    ServiceModule,
     AppRoutingModule,
     TranslateModule.forRoot({
         loader: {
@@ -43,8 +41,14 @@ import { LoginComponent } from './auth/login/login.component';
     })
   ],
   exports: [],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }
+  ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
 

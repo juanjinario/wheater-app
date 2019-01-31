@@ -7,7 +7,7 @@ import {TranslateService} from '@ngx-translate/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'front-office';
+  title = 'weather-app';
   constructor(private translate: TranslateService) {
     translate.setDefaultLang('es');
   }

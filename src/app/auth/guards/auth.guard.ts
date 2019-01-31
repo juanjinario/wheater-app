@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { AuthService } from './auth.service';
+import { AuthService } from '../auth.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class AuthGuardService {
+export class AuthGuard {
 
   constructor(
     private router: Router,
@@ -20,7 +20,7 @@ export class AuthGuardService {
     if (this.authService.isLogged()) {
       return true;
     }
-
+    console.log('no esta logueado');
     this.router.navigate(['/auth/login']);
     return false;
   }

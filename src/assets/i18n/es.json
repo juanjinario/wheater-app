@@ -1,9 +1,16 @@
 {
-    "layout": {
+    "app": {
         "greeting": "Hola {{name}}!",
         "spanish": "Español",
-        "english": "Inglés",
-        "title": "Demo Traducción"
+        "english": "Inglés"
+    },
+    "login": {
+        "login": "Inicio de Sesión",
+        "logIn": "Iniciar Sesión",
+        "password": "Contraseña",
+        "passwordRequired": "La contraseña es obligatoria",
+        "username": "Nombre de usuario",
+        "usernameRequired": "El nombre de usuario es obligatorio"
     },
     "routing": {
         "dashboard": "Dashboard",
@@ -14,6 +21,7 @@
         "news": "Noticias"
     },
     "commands": {
+        "accept": "Aceptar",
         "save": "Guardar",
         "cancel": "Cancelar",
         "quit": "Salir"

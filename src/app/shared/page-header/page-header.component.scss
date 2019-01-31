@@ -1,0 +1,21 @@
+.page-header {
+    margin: 1em;
+    .mat-icon {
+        display: inline-block;
+        font-size: 36px;
+        height: 36px;
+        vertical-align: middle;
+        width: 36px;
+    }
+    h3 {
+        display: inline-block;
+        font-size: 1.25em;
+        margin: 0 0 0 8px;
+        padding: 0;
+        vertical-align: middle;
+        span {
+            font-size: 1em;
+            font-weight: 100;
+        }
+    }
+}
