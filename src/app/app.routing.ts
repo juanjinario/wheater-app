@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { NopagefoundComponent } from './404/nopagefound.component';
 import { LoginComponent } from './auth/login/login.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
+import { WeatherComponent } from './pages/weather/weather.component';
 
 const routes: Routes = [
   {

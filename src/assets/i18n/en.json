@@ -6,14 +6,15 @@
         "title": "Title"
     },
     "routing": {
-        "dashboard": "Dashboard",
-        "query": "Query",
-        "assets": "Assets",
-        "evaluation": "Evaluation",
-        "indicators": "Indicators",
-        "news": "News"
+        "about-us": "About Us",
+        "weather": "Weather",
+        "dashboard": "Dashboard"
+    },
+    "weather": {
+        "title": "Weather"
     },
     "commands": {
+        "accept": "Accept",
         "save": "Save",
         "cancel": "Cancel",
         "quit": "Quit"

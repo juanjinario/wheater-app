@@ -3,11 +3,11 @@ import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
-  selector: 'app-dahsboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  selector: 'app-weather',
+  templateUrl: './weather.component.html',
+  styleUrls: ['./weather.component.scss']
 })
-export class DashboardComponent implements OnInit {
+export class WeatherComponent implements OnInit {
 
   constructor(
     private toastr: ToastrService) { }

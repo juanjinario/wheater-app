@@ -5,11 +5,11 @@ import { SharedModule } from '../shared/shared.module';
 import { AppPagesRoutingModule } from './pages.routing';
 // Components
 import { PagesComponent } from './pages.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { WeatherComponent } from './weather/weather.component';
 
 @NgModule({
   declarations: [
-    DashboardComponent,
+    WeatherComponent,
     PagesComponent
   ],
   imports: [
@@ -18,7 +18,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     AppPagesRoutingModule
   ],
   exports: [
-    DashboardComponent,
+    WeatherComponent,
     PagesComponent,
     SharedModule
   ]

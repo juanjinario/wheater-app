@@ -13,12 +13,16 @@
         "usernameRequired": "El nombre de usuario es obligatorio"
     },
     "routing": {
-        "dashboard": "Dashboard",
-        "query": "Consulta",
-        "assets": "Activos",
-        "evaluation": "Evalución",
-        "indicators": "Indicadores",
-        "news": "Noticias"
+        "about-us": "Acerca de nosotros",
+        "weather": "Clima",
+        "dashboard": "Dashboard"
+    },
+    "weather": {
+        "title": "Clima",
+        "santiago": "Santiago",
+        "bsAires": "Buenos Aires",
+        "lima": "Lima",
+        "saoPaulo": "Sao Paulo"
     },
     "commands": {
         "accept": "Aceptar",

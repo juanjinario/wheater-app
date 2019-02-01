@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
       return false;
     }
     this.authService.login(this.editedUser());
-    this.router.navigate(['/dashboard']);
+    this.router.navigate(['/weather']);
   }
 
   editedUser(): User {

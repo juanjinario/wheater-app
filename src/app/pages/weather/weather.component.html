@@ -1,6 +1,21 @@
-<app-page-header icon="dashboard" text='{{ "routing.dashboard" | translate }}'></app-page-header>
+<app-page-header icon="filter_drama" text='{{ "routing.weather" | translate }}'></app-page-header>
 <div class="content-wrapper">
 
+    <mat-button-toggle-group #cities="matButtonToggleGroup">
+        <mat-button-toggle value="left">
+            {{ "weather.santiago" | translate }}
+        </mat-button-toggle>
+        <mat-button-toggle value="center">
+            {{ "weather.bsAires" | translate }}
+        </mat-button-toggle>
+        <mat-button-toggle value="right">
+            {{ "weather.lima" | translate }}
+        </mat-button-toggle>
+        <mat-button-toggle value="justify" disabled>
+            {{ "weather.saoPaulo" | translate }}
+        </mat-button-toggle>
+    </mat-button-toggle-group>
+    <div class="example-selected-value">Selected value: {{cities.value}}</div>
     <div fxLayout="row wrap" fxLayoutGap="2%">
         <mat-card fxFlex="32">
             <app-spline-area></app-spline-area>

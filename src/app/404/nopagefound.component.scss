@@ -1,0 +1,13 @@
+.center-containner {
+    margin-top: 10em;
+    text-align: center;
+    .big-title {
+        font-size: 8em;
+        .material-icons {
+            font-size: 1em;
+            left: 0.04em;
+            position: relative;
+            top: 0.10em;
+        }
+    }
+}
