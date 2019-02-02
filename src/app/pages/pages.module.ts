@@ -6,11 +6,13 @@ import { AppPagesRoutingModule } from './pages.routing';
 // Components
 import { PagesComponent } from './pages.component';
 import { WeatherComponent } from './weather/weather.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 @NgModule({
   declarations: [
     WeatherComponent,
-    PagesComponent
+    PagesComponent,
+    AboutUsComponent
   ],
   imports: [
     SharedModule,

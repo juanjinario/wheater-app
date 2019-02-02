@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  server_url : 'http://51.255.82.226:8085'
+  server_url : 'http://api.openweathermap.org'
 };
 
 /*

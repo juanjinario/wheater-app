@@ -13,16 +13,21 @@
         "usernameRequired": "El nombre de usuario es obligatorio"
     },
     "routing": {
-        "about-us": "Acerca de nosotros",
+        "about-us": "Acerca de",
         "weather": "Clima",
         "dashboard": "Dashboard"
     },
     "weather": {
+        "celsius": "Celsius",
+        "degrees": "Grados",
+        "farenheit": "Farenheit",
+        "kelvin": "Kelvin",
         "title": "Clima",
         "santiago": "Santiago",
         "bsAires": "Buenos Aires",
         "lima": "Lima",
-        "saoPaulo": "Sao Paulo"
+        "saoPaulo": "Sao Paulo",
+        "temperature": "Temperatura"
     },
     "commands": {
         "accept": "Aceptar",

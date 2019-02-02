@@ -1,8 +1,7 @@
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {  UserService } from './service.index';
-
+import {  UserService, WeatherService } from './service.index';
 
 @NgModule({
   imports: [
@@ -10,7 +9,8 @@ import {  UserService } from './service.index';
     HttpClientModule
   ],
   providers: [
-    UserService
+    UserService,
+    WeatherService
   ],
   declarations: []
 })

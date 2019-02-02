@@ -1,3 +1,23 @@
+.header-options {
+    margin-bottom:2%;
+}
+
 .row {
     margin: 2% 0 0;
+}
+
+.big-card{
+    .subtitle{
+        font-size: 4em;
+        font-weight: 400;
+    }
+    .description{
+        opacity: 0.8;
+        text-align: center;
+    }
+    .icon{
+        display:block;
+        height:150px;
+        opacity:0.75;
+    }
 }

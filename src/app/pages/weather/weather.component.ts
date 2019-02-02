@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
+import { Weather } from '../../models/weather.model';
+import { WeatherService } from '../../services/service.index';
 
 
 @Component({
@@ -9,22 +11,37 @@ import { ToastrService } from 'ngx-toastr';
 })
 export class WeatherComponent implements OnInit {
 
+  city = 'Santiago,CL';
+  temperature = 'metric';
+  weather: Weather;
+
   constructor(
-    private toastr: ToastrService) { }
+    private toastr: ToastrService,
+    private weatherService: WeatherService) {}
 
   ngOnInit() {
+    this.loadData();
   }
 
-  showSuccess() {
-    console.log('success');
-    this.toastr.success('Hello world!', 'Toastr SECCESS!');
+  loadData() {
+    this.getCurrentWeather();
   }
 
-  showError() {
-    this.toastr.error('Hello world!', 'Toastr ERROR!');
+  public onCityChange(_city: string) {
+    this.city = _city;
+    this.loadData();
   }
 
-  showInfo() {
-    this.toastr.info('Hello world!', 'Toastr Information!');
+  public onUnitsChange() {
+    this.loadData();
   }
+
+  getCurrentWeather() {
+    this.weatherService.getWeather(this.city, this.temperature).subscribe(
+      (data) => {
+        this.weather = data;
+      }
+    );
+  }
+
 }

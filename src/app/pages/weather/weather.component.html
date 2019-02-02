@@ -1,41 +1,55 @@
 <app-page-header icon="filter_drama" text='{{ "routing.weather" | translate }}'></app-page-header>
 <div class="content-wrapper">
 
-    <mat-button-toggle-group #cities="matButtonToggleGroup">
-        <mat-button-toggle value="left">
-            {{ "weather.santiago" | translate }}
-        </mat-button-toggle>
-        <mat-button-toggle value="center">
-            {{ "weather.bsAires" | translate }}
-        </mat-button-toggle>
-        <mat-button-toggle value="right">
-            {{ "weather.lima" | translate }}
-        </mat-button-toggle>
-        <mat-button-toggle value="justify" disabled>
-            {{ "weather.saoPaulo" | translate }}
-        </mat-button-toggle>
-    </mat-button-toggle-group>
-    <div class="example-selected-value">Selected value: {{cities.value}}</div>
-    <div fxLayout="row wrap" fxLayoutGap="2%">
-        <mat-card fxFlex="32">
-            <app-spline-area></app-spline-area>
-        </mat-card>
+    <div fxLayoutAlign="space-between center" class="header-options">
+        <mat-button-toggle-group #cities="matButtonToggleGroup" [value]="city" (change)="onCityChange(cities.value)">
+            <mat-button-toggle value="Santiago,CL">
+                {{ "weather.santiago" | translate }}
+            </mat-button-toggle>
+            <mat-button-toggle value="Buenos Aires,AR">
+                {{ "weather.bsAires" | translate }}
+            </mat-button-toggle>
+            <mat-button-toggle value="Lima,PE">
+                {{ "weather.lima" | translate }}
+            </mat-button-toggle>
+            <mat-button-toggle value="Sao Paulo,BR">
+                {{ "weather.saoPaulo" | translate }}
+            </mat-button-toggle>
+        </mat-button-toggle-group>
 
-        <mat-card fxFlex="32">
-            <app-nested-pie></app-nested-pie>
+        <mat-form-field>
+            <mat-select [(value)]="temperature" placeholder="{{ 'weather.degrees' | translate }}" (selectionChange)="onUnitsChange()">
+              <mat-option value="default">{{ "weather.kelvin" | translate }}</mat-option>
+              <mat-option value="metric">{{ "weather.celsius" | translate }}</mat-option>
+              <mat-option value="imperial">{{ "weather.farenheit" | translate }}</mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+
+    <div fxLayout="row wrap" fxLayoutGap="2%">
+        
+        <mat-card class="big-card">
+            <mat-card-header>
+                <mat-card-title>{{weather?.cityName}}</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <div fxLayout="row" fxLayoutAlign="start center">
+                <img class="icon" *ngIf="weather?.img" src="http://openweathermap.org/img/w/{{weather?.img}}.png">
+                <div>
+                    <h1 class="subtitle">{{weather?.temp | number:'1.0-0'}}&deg;</h1>
+                    <h4 class="description">{{weather?.type}}</h4>
+                </div>
+            </div>
+            <div class="pan">
+                <div class="into temp">
+                <h4>temp min: {{weather?.tempMin | number:'1.0-0'}}&deg;</h4>
+                <h4>temp max: {{weather?.tempMax | number:'1.0-0'}}&deg;</h4>
+                </div>
+            </div>
         </mat-card>
 
         <mat-card fxFlex="32">
             <app-bars></app-bars>
-        </mat-card>
-    </div>
-
-    <div fxLayout="row wrap" fxLayoutGap="2%" class="row">
-        <mat-card fxFlex="32">
-            <app-pie></app-pie>
-        </mat-card>
-        <mat-card fxFlex="66">
-            <app-step-line></app-step-line>
         </mat-card>
     </div>
 
@@ -52,21 +66,5 @@
         <button mat-button color="primary" (click)="showError()">
                   Show Error
             </button>
-    </mat-card>
-
-    <mat-card class="row">
-        Main Theme:
-        <button mat-raised-button color="primary">
-          Primary
-        </button>
-        <button mat-raised-button color="accent">
-          Accent
-        </button>
-        <button mat-raised-button color="warn">
-          Warning
-        </button>
-        <button mat-raised-button matTooltip="Info about the action" aria-label="Button that displays a tooltip when focused or hovered over">
-            Action
-        </button>
     </mat-card>
 </div>
