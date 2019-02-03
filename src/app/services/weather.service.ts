@@ -18,8 +18,9 @@ export class WeatherService {
     return this.http.get(`${ConstUrl.BASE_URL}${ConstUrl.WEATHER}?q=${city}&${ConstUrl.APPID}=${ConstUrl.KEY}&${ConstUrl.UNITS}=${units}`)
     .pipe(
       map((res: any) => {
+        console.log(res);
         return new Weather(res.name, res.main.temp, res.weather[0].description,
-          res.main.temp_min, res.main.temp_max, res.weather[0].icon);
+          res.main.temp_min, res.main.temp_max, res.weather[0].icon, res.dt, res.main.humidity, res.wind.speed, res.visibility);
       }),
       catchError(err => of([]))
     );

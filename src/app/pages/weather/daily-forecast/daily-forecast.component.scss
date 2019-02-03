@@ -1,8 +1,14 @@
 .simple-card{
     text-align: center;
+    .title{
+        font-weight: 400;
+    }
+    .subtitle{
+        margin-top: 0.15em;
+    }
     .icon{
         display: block;
-        height:150px;
-        opacity:0.75;
+        height:135px;
+        margin: 15px 0;
     }
 }

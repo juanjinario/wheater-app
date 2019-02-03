@@ -70,7 +70,7 @@ export class WeatherComponent implements OnInit {
     this.dayForcastJSON = [];
     for (let forecast of _dayForecast) {
       this.dayForcastJSON.push({
-        'label': formatDate(forecast.date, 'hh:mm', 'en-US'),
+        'label': formatDate(forecast.date, 'HH:mm', 'en-US'),
         'value': forecast.temp
       });
     }

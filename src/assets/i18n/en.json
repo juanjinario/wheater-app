@@ -10,8 +10,40 @@
         "weather": "Weather",
         "dashboard": "Dashboard"
     },
+    "forecast": {
+        "monday": "Monday",
+        "tuesday": "Tuesday",
+        "wednesday": "Wednesdey",
+        "thursday": "Thursday",
+        "friday": "Friday",
+        "saturday": "Saturday",
+        "sunday": "Sunday"
+    },
     "weather": {
-        "title": "Weather"
+        "celsius": "Celsius",
+        "degrees": "Degrees",
+        "farenheit": "Farenheit",
+        "forecast": "Forecast",
+        "kelvin": "Kelvin",
+        "title": "Weather",
+        "humidity": "Humidity",
+        "santiago": "Santiago",
+        "bsAires": "Buenos Aires",
+        "lima": "Lima",
+        "saoPaulo": "Sao Paulo",
+        "temperature": "Temperature",
+        "light rain": "Light Rain",
+        "clear sky": "Clear sky",
+        "few clouds": "Few clouds",
+        "scattered clouds": "Scattered clouds",
+        "broken clouds": "Broken clouds",
+        "shower rain": "Shower rain",
+        "rain": "Rain",
+        "thunderstorm": "Thunderstorm",
+        "snow": "Snow",
+        "mist": "Mist",
+        "visibility": "Visibility",
+        "wind": "Wind"
     },
     "commands": {
         "accept": "Accept",

@@ -6,10 +6,10 @@
     <div fxLayout="row" fxLayoutAlign="space-around center">
     <div *ngFor="let dayWeather of forecast" class="simple-card">
         <div>
-        <h2 class="date">{{ 'forecast.' + getWeekDay(dayWeather.date) | translate }}</h2>
-        <h5 class="date">{{ dayWeather.date | date: 'dd/MM/yy'}}</h5>
-        <img class="icon"src="http://openweathermap.org/img/w/{{dayWeather.img}}.png">
-        <p>{{dayWeather.description}}</p>
+        <h2 class="title">{{ 'forecast.' + getWeekDay(dayWeather.date) | translate }}</h2>
+        <h5 class="subtitle">{{ dayWeather.date | date: 'dd/MM/yy'}}</h5>
+        <img class="icon"src="assets/img/weather/{{dayWeather.img}}.png">
+        <p>{{ 'weather.' + dayWeather.description | translate }}</p>
         <p>{{dayWeather.temp}}&deg;</p>
         </div>
     </div>

@@ -8,13 +8,15 @@ import { PagesComponent } from './pages.component';
 import { WeatherComponent } from './weather/weather.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { DailyForecastComponent } from './weather/daily-forecast/daily-forecast.component';
+import { WeatherExtraInfoComponent } from './weather/weather-extra-info/weather-extra-info.component';
 
 @NgModule({
   declarations: [
     WeatherComponent,
     PagesComponent,
     AboutUsComponent,
-    DailyForecastComponent
+    DailyForecastComponent,
+    WeatherExtraInfoComponent
   ],
   imports: [
     SharedModule,

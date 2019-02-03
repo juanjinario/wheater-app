@@ -7,8 +7,8 @@ import { AuthGuard } from '../auth/guards/auth.guard';
 
 
 const pagesRoutes: Routes = [
-  // { path: '', component: PagesComponent, canActivate: [AuthGuard], children: [
-    { path: '', component: PagesComponent, children: [
+    { path: '', component: PagesComponent, canActivate: [AuthGuard], children: [
+  // { path: '', component: PagesComponent, children: [
       { path: 'weather', component: WeatherComponent },
       { path: 'about-us', component: AboutUsComponent },
       { path: '', redirectTo: '/weather', pathMatch: 'full' },

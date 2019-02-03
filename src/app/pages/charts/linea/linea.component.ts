@@ -13,8 +13,8 @@ export class LineaComponent implements OnInit {
 
   dataSource: Object;
 
-  width = 600;
-  height = 300;
+  width = 550;
+  height = 250;
   type = 'line';
   dataFormat = 'json';
 

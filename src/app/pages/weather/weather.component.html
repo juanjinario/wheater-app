@@ -35,27 +35,27 @@
 <div class="content-wrapper">
     <div fxLayout="row wrap" fxLayoutGap="2%">
         
-        <mat-card class="big-card">
+        <mat-card class="big-card accent-bg">
             <mat-card-header>
-                <mat-card-title>{{weather?.cityName}}</mat-card-title>
+                <mat-card-title>{{weather?.cityName}}, <small>{{weather?.date * 1000 | date:'HH:mm'}}</small></mat-card-title>
             </mat-card-header>
             <div fxLayout="row" fxLayoutAlign="start center">
-                <img class="icon" *ngIf="weather?.img" src="http://openweathermap.org/img/w/{{weather?.img}}.png">
+                <img class="icon" *ngIf="weather?.img" src="assets/img/weather/{{weather?.img}}.png">
                 <div>
                     <h1 class="subtitle">{{weather?.temp | number:'1.0-0'}}&deg;</h1>
-                    <h4 class="description">{{weather?.type}}</h4>
+                    <h4 class="description" *ngIf="weather?.type">{{ 'weather.' + weather?.type | translate}}</h4>
                 </div>
             </div>
-            <div class="pan">
-                <div class="into temp">
-                <h4>temp min: {{weather?.tempMin | number:'1.0-0'}}&deg;</h4>
-                <h4>temp max: {{weather?.tempMax | number:'1.0-0'}}&deg;</h4>
-                </div>
-            </div>
+            <p class="bottom-text">{{weather?.tempMax | number:'1.0-0'}}&deg;</p>
+            <p class="bottom-text min">{{weather?.tempMin | number:'1.0-0'}}&deg;</p>
         </mat-card>
 
         <mat-card>
             <app-linea *ngIf="dayForecast?.length > 0" [forecast]="dayForcastJSON"></app-linea>
+        </mat-card>
+
+        <mat-card [fxFlex]>
+            <app-weather-extra-info [visibility]="weather?.visibility" [wind]="weather?.wind" [humidity]="weather?.humidity"></app-weather-extra-info>
         </mat-card>
     </div>
 
