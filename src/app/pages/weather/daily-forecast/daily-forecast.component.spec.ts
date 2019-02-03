@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SplineAreaComponent } from './spline-area.component';
+import { DailyForecastComponent } from './daily-forecast.component';
 
-describe('SplineAreaComponent', () => {
-  let component: SplineAreaComponent;
-  let fixture: ComponentFixture<SplineAreaComponent>;
+describe('DailyForecastComponent', () => {
+  let component: DailyForecastComponent;
+  let fixture: ComponentFixture<DailyForecastComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SplineAreaComponent ]
+      declarations: [ DailyForecastComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SplineAreaComponent);
+    fixture = TestBed.createComponent(DailyForecastComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

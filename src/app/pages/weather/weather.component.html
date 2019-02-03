@@ -1,38 +1,44 @@
-<app-page-header icon="filter_drama" text='{{ "routing.weather" | translate }}'></app-page-header>
-<div class="content-wrapper">
-
-    <div fxLayoutAlign="space-between center" class="header-options">
-        <mat-button-toggle-group #cities="matButtonToggleGroup" [value]="city" (change)="onCityChange(cities.value)">
-            <mat-button-toggle value="Santiago,CL">
-                {{ "weather.santiago" | translate }}
-            </mat-button-toggle>
-            <mat-button-toggle value="Buenos Aires,AR">
-                {{ "weather.bsAires" | translate }}
-            </mat-button-toggle>
-            <mat-button-toggle value="Lima,PE">
-                {{ "weather.lima" | translate }}
-            </mat-button-toggle>
-            <mat-button-toggle value="Sao Paulo,BR">
-                {{ "weather.saoPaulo" | translate }}
-            </mat-button-toggle>
-        </mat-button-toggle-group>
-
-        <mat-form-field>
-            <mat-select [(value)]="temperature" placeholder="{{ 'weather.degrees' | translate }}" (selectionChange)="onUnitsChange()">
-              <mat-option value="default">{{ "weather.kelvin" | translate }}</mat-option>
-              <mat-option value="metric">{{ "weather.celsius" | translate }}</mat-option>
-              <mat-option value="imperial">{{ "weather.farenheit" | translate }}</mat-option>
-            </mat-select>
-          </mat-form-field>
+<div class="page-header" fxLayoutAlign="space-between center">
+    <div>
+        <mat-icon class="mat-icon-md" aria-hidden="true">filter_drama</mat-icon>
+        <h3>{{'routing.weather' | translate}}</h3>
     </div>
+    <div fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="5%">
+        <div>
+            <mat-button-toggle-group #cities="matButtonToggleGroup" [value]="city" (change)="onCityChange(cities.value)">
+                <mat-button-toggle value="Santiago,CL">
+                    {{ "weather.santiago" | translate }}
+                </mat-button-toggle>
+                <mat-button-toggle value="Buenos Aires,AR">
+                    {{ "weather.bsAires" | translate }}
+                </mat-button-toggle>
+                <mat-button-toggle value="Lima,PE">
+                    {{ "weather.lima" | translate }}
+                </mat-button-toggle>
+                <mat-button-toggle value="Sao Paulo,BR">
+                    {{ "weather.saoPaulo" | translate }}
+                </mat-button-toggle>
+            </mat-button-toggle-group>
+        </div>
+        <div class="control-t">
+            <mat-form-field>
+                <mat-select [(value)]="temperature" placeholder="{{ 'weather.degrees' | translate }}" (selectionChange)="onUnitsChange()">
+                    <mat-option value="default">{{ "weather.kelvin" | translate }}</mat-option>
+                    <mat-option value="metric">{{ "weather.celsius" | translate }}</mat-option>
+                    <mat-option value="imperial">{{ "weather.farenheit" | translate }}</mat-option>
+                </mat-select>
+            </mat-form-field>
+        </div>
+    </div>
+</div>
 
+<div class="content-wrapper">
     <div fxLayout="row wrap" fxLayoutGap="2%">
         
         <mat-card class="big-card">
             <mat-card-header>
                 <mat-card-title>{{weather?.cityName}}</mat-card-title>
             </mat-card-header>
-            <mat-divider></mat-divider>
             <div fxLayout="row" fxLayoutAlign="start center">
                 <img class="icon" *ngIf="weather?.img" src="http://openweathermap.org/img/w/{{weather?.img}}.png">
                 <div>
@@ -48,23 +54,10 @@
             </div>
         </mat-card>
 
-        <mat-card fxFlex="32">
-            <app-bars></app-bars>
+        <mat-card>
+            <app-linea *ngIf="dayForecast?.length > 0" [forecast]="dayForcastJSON"></app-linea>
         </mat-card>
     </div>
 
-    <mat-card class="row">
-        <mat-card-header>
-            <mat-card-title>Alertas</mat-card-title>
-        </mat-card-header>
-        <button mat-button color="accent" (click)="showInfo()">
-                Show Info
-            </button>
-        <button mat-button color="primary" (click)="showSuccess()">
-                Show Success
-            </button>
-        <button mat-button color="primary" (click)="showError()">
-                  Show Error
-            </button>
-    </mat-card>
+    <app-daily-forecast *ngIf="dailyForecast?.length > 0" [forecast]="dailyForecast" [city]="dailyForecast[0].cityName" class="row"></app-daily-forecast>
 </div>

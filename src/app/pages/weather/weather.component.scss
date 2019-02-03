@@ -1,8 +1,12 @@
-.header-options {
-    margin-bottom:2%;
+.page-header{
+    .control-t{
+        position:relative;
+        top:0.6em;
+    }
 }
 
 .row {
+    display:block;
     margin: 2% 0 0;
 }
 

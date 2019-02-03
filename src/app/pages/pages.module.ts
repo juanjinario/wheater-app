@@ -7,12 +7,14 @@ import { AppPagesRoutingModule } from './pages.routing';
 import { PagesComponent } from './pages.component';
 import { WeatherComponent } from './weather/weather.component';
 import { AboutUsComponent } from './about-us/about-us.component';
+import { DailyForecastComponent } from './weather/daily-forecast/daily-forecast.component';
 
 @NgModule({
   declarations: [
     WeatherComponent,
     PagesComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    DailyForecastComponent
   ],
   imports: [
     SharedModule,

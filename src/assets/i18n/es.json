@@ -17,10 +17,20 @@
         "weather": "Clima",
         "dashboard": "Dashboard"
     },
+    "forecast": {
+        "monday": "Lunes",
+        "tuesday": "Martes",
+        "wednesday": "Miércoles",
+        "thursday": "Jueves",
+        "friday": "Viernes",
+        "saturday": "Sábado",
+        "sunday": "Domingo"
+    },
     "weather": {
         "celsius": "Celsius",
         "degrees": "Grados",
         "farenheit": "Farenheit",
+        "forecast": "Pronóstico",
         "kelvin": "Kelvin",
         "title": "Clima",
         "santiago": "Santiago",

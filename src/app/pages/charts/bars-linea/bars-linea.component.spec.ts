@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NestedPieComponent } from './nested-pie.component';
+import { BarsLineaComponent } from './bars-linea.component';
 
-describe('NestedPieComponent', () => {
-  let component: NestedPieComponent;
-  let fixture: ComponentFixture<NestedPieComponent>;
+describe('BarsLineaComponent', () => {
+  let component: BarsLineaComponent;
+  let fixture: ComponentFixture<BarsLineaComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NestedPieComponent ]
+      declarations: [ BarsLineaComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(NestedPieComponent);
+    fixture = TestBed.createComponent(BarsLineaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
